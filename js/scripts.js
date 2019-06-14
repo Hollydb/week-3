@@ -41,28 +41,35 @@ $(document).ready(function() {
     event.preventDefault();
     var num =parseInt($("input#input").val());
     var output = beepBoop(num);
-    console.log(num);
+    // console.log(num);
 
-    $('#output').append(output);
+    $('#output').append(" " + numArray + " ");
   });
 });
 
 
 // //Business Logic:
+var numArray = [];
 
 function beepBoop(num){
   for (var i=1; i<=num; i++ ){
-    if (i == "3"){
-      return ("Im sorry Dave, I can't do that");
+    if (i == "1"){
+      console.log("Beep");
+      numArray.push('beep');
     } else if (i == "2"){
-      return ("Boop");
-    } else if (i == "1"){
-      return ("Beep");
+      console.log("Boop");
+      numArray.push('boop');
+    } else if (i == "3"){
+      console.log("Im sorry Dave, I can't do that");
+      numArray.push("Im sorry Dave, I can't do that");
     } else {
-      return [i];
-
+      console.log[i];
+      numArray.push(i);
     }
   }
-
 }
 
+
+numArray.forEach(function(numArray){
+  alet (numArray);
+});

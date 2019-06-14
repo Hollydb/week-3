@@ -36,13 +36,16 @@ $(document).ready(function() {
 
 
 function beepBoop(num){
-  for (var i = 0; i < num.length; i++ ){
-    if (num === 1){
+  for (var i=1; i < 101; i++ ){
+    if (num == "1"){
       return ("Beep");
-    } else if (num === 2){
+    } else if (num == "2"){
       return ("Boop");
-    } else if (num === 3){
+    } else if (num == "3"){
       return ("Im sorry Dave, I can't do that");
+    } else {
+      return [num];
     }
   }
 }
+

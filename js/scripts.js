@@ -22,20 +22,20 @@ var outputArray = [];
 
 
 function printNum(num){
-  for (var i=1; i<=num; i++ ){
+  for (var i=0; i<num; i++){
       outputArray.push(i);
   }
 }
 
 
 function beepBoop(num){
-  for (var i=0; i<=outputArray.length; i++ ){
-    if (outputArray[i] == "1"){
-      numArray.push('beep');
-    } else if (outputArray[i] == "2"){
-      numArray.push('boop');
-    } else if (outputArray[i] == "3"){
+  for (var i=0; i<outputArray.length; i++ ){
+    if (outputArray[i].toString().includes("3")){
       numArray.push("I'm sorry Dave I can't do that");
+    } else if (outputArray[i].toString().includes("2")){
+      numArray.push("Boop");
+    } else if (outputArray[i].toString().includes("1")){
+      numArray.push("Beep");
     } else {
       numArray.push(i);
     }
